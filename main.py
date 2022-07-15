@@ -6,10 +6,12 @@ import re
 name = "7-5-22-amazon.txt"
 file = open(name, "r", encoding='utf-8')
 reference = file.readlines()
+
 rxns = {}
 week1 = {
     
 }
+
 for o in range (0, len(reference)):
   x = re.search("CardsClient\-\-\>\<div id", reference[o])
   if x:
