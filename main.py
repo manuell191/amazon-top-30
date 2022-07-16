@@ -27,7 +27,7 @@ for j in fileList:
     x = re.search("CardsClient\-\-\>\<div id", reference[o])
     if x:
       y = re.findall("(?<=\<span\>\<div class\=)(.*?)(?=div\>)", reference[o])
-      for ia in range(0, len(y)):
+      for ia in range(30):
         z = re.findall("(?<=\"\>)(.*?)(?=\<\/)", y[ia])
         for i in range(0, len(z)):
           z[i] = z[i].replace("&#x27;", "'")
