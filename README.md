@@ -8,3 +8,6 @@ wayback machine on archive.org. The title of the weeks are a bit
 confusing, since 4/29/22 is marked as week ten, since it was the
 last data point that I collected, and 7/5/22 is marked as week one,
 since it was the first data point that I collected.
+
+When the program runs, the first plot will show, and the second
+plot will be shown after you close the first.
