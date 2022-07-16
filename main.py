@@ -1,6 +1,7 @@
 import re
 import matplotlib.pyplot as plt
 import numpy as np
+from matplotlib.pyplot import figure
 
 fileList = ["7-5-22-amazon.txt", "6-25-22-amazon.txt", "6-15-22-amazon.txt", "6-11-22-amazon.txt", "6-2-22-amazon.txt", "5-24-22-amazon.txt", "5-17-22-amazon.txt", "5-10-22-amazon.txt", "5-5-22-amazon.txt", "4-29-22-amazon.txt"]
 
@@ -227,18 +228,14 @@ for i in occurences_dict:
   old_list.append(i)
   new_list.append(occurences_dict[i])
 
-f = plt.figure()
-f.set_figwidth(10)
-f.set_figheight(10)
-
 x = np.array(old_list)
 y = np.array(new_list)
 
-plt.subplot(2, 1, 1)
 plt.bar(x, y)
 plt.xlabel("Number of weeks")
 plt.ylabel("Number of occurences")
 plt.title("Weeks in the top 30")
+plt.show()
 
 top_ten_movement = {
     
@@ -337,7 +334,8 @@ for i in new_top_ten_movement:
 
 counter = 1
 
-plt.subplot(2, 1, 2)
+figure(figsize=(15, 5))
+
 for p in top_ten_movement:
   title_list.append(p)
   xpointlabels = []
